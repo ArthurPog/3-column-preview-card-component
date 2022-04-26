@@ -14,9 +14,13 @@
   --card-width-mobile: 327px;
 }
 
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: var(--very-light-grey);
-  margin: auto;
   padding: 1rem;
   min-height: 100vh;
   display: flex;
