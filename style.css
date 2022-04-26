@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  --bright-orange: #e38826;
+  --dark-cyan: #006970;
+  --very-dark-cyan: #004241;
+  --transparent-white: rgba(255, 255, 255, 75%);
+  --very-light-grey: #f2f2f2;
+  --card-padding: 48px;
+  --card-width-desktop: 307px;
+  --card-width-mobile: 327px;
+}
+
+body {
+  background: var(--very-light-grey);
+  margin: auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main div {
+  box-sizing: border-box;
+  max-width: var(--card-width-desktop);
+  padding: var(--card-padding);
+}
+
+/* This selects the first div in the main element */
+main div:nth-child(1) {
+  background: var(--bright-orange);
+  border-radius: .5rem 0 0 .5rem;
+}
+
+main div:nth-child(2) {
+  background: var(--dark-cyan);
+}
+
+main div:nth-child(3) {
+  background: var(--very-dark-cyan);
+  border-radius: 0 .5rem .5rem 0;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.6em;
+  color: var(--very-light-grey);
+}
+
+p {
+  color: var(--transparent-white);
+  margin-bottom: 6rem;
+  line-height: 1.7;
+
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  background: var(--very-light-grey);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.02rem;
+  height: 50px;
+  width: 150px;
+}
+
+/* This selects the first div in the main element and then selects the button element inside it */
+main div:nth-child(1) > button {
+  color: var(--bright-orange);
+}
+
+main div:nth-child(2) > button {
+  color: var(--dark-cyan);
+}
+
+main div:nth-child(3) > button {
+  color: var(--very-dark-cyan);
+}
+
+button:hover {
+  background: transparent;
+  color: var(--very-light-grey) !important;
+  border: solid 2px;
+  border-color: var(--very-light-grey);
+}
+
+button:active {
+  background: rgba(255, 255, 255, 50%);
+  color: var(--very-light-grey) !important;
+  border: solid 2px;
+  border-color: rgba(255, 255, 255, 50%);
+}
+
+/* This is a conditional CSS meant for when the screen is less than 992 pixels wide. Remember to always write this at the very bottom.
+I made the mistake of writing it up top and was a little annoyed that it wouldn't change the style when my screen got smaller. I
+completely forgot that the last style is the one that is always applied last, meaning prior rules get overwritten */
+@media screen and (max-width: 992px) {
+  main {
+    display: block;
+  }
+
+  main div {
+    max-width: var(--card-width-mobile);
+    min-width: var(--card-width-desktop);
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  main div:nth-child(1) {
+    border-radius: .5rem .5rem 0 0;
+  }
+  
+  main div:nth-child(3) {
+    border-radius: 0 0 .5rem .5rem;
+  }  
+}
