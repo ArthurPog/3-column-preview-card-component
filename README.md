@@ -1,4 +1,4 @@
-# My fourth project and solution for Frontend Mentor's 3-column challenge using nth child pseudo-selectors and CSS variables
+# My fourth project and solution to the 3-column preview card component challenge over at [Frontend Mentor](https://www.frontendmentor.io/challenges) using nth child pseudo-selectors and CSS variables
 
 ## This was the assignment
 
