@@ -1,5 +1,15 @@
 # My fourth project and solution for Frontend Mentor's 3-column challenge using nth child pseudo-selectors and CSS variables
 
+## This was the assignment
+
+![](./design/desktop-design.jpg)
+
+## This is my solution
+
+[Click here to see the live page](https://arthurpog.github.io/3-column-preview-card-component/)
+
+![](./design/my_solution.png)
+
 I had 2 goals during this project.
 
 1. Get acquainted with CSS variables
